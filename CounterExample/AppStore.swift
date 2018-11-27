@@ -16,7 +16,7 @@ let mainStore = Store<AppState>(
 )
 
 func appReducer(action: Action, state: AppState?) -> AppState {
-    var newState = AppState()
-    newState.counter = counterReducer(action: action, state: state?.counter)
+    var newState = state ?? AppState()
+    newState.myState = myStateReducer(action: action, state: newState.myState)
     return newState
 }

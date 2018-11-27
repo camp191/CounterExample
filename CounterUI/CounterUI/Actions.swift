@@ -12,3 +12,9 @@ struct CounterActions {
     struct ReactionIncrease: Action {}
     struct ReactionDecrease: Action {}
 }
+
+struct NameActions {
+    struct UpdateName: Action {
+        let name: String
+    }
+}

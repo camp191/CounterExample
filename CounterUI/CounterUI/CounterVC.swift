@@ -11,22 +11,37 @@ import ReSwift
 import AppState
 
 public protocol CounterProtocolState {
-    var counter: CounterState {get set}
+    var myState: MyState {get set}
+}
+
+public struct MyState {
+    var counter: CounterState
+    var name: NameState
+    public init() {
+        counter = CounterState(num: 0)
+        name = NameState(name: "")
+    }
 }
 
 public struct CounterState {
     public var num: Int
 }
 
+public struct NameState {
+    public var name: String
+}
+
 extension AppState : CounterProtocolState {
-    public var counter: CounterState {
+    public var myState: MyState {
         get {
-            return self.mystate["CounterProtocolState"] as! CounterState
+            if let myState = self.mystate["CounterProtocolState"] as? MyState {
+                return myState
+            }
+            return MyState()
         }
-        set {
-            self.mystate["CounterProtocolState"] = newValue
-        }
+        set { self.mystate["CounterProtocolState"] = newValue }
     }
+    
 }
 
 public class CounterVC: UIViewController, StoreSubscriber {
@@ -39,6 +54,11 @@ public class CounterVC: UIViewController, StoreSubscriber {
     
     public var localStore: Store<AppState>?
     
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        tfName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         localStore?.subscribe(self)
@@ -50,7 +70,8 @@ public class CounterVC: UIViewController, StoreSubscriber {
     }
     
     public func newState(state: AppState) {
-        lblCounter.text = "\(state.counter.num)"
+        lblCounter.text = "\(state.myState.counter.num)"
+        lblName.text = "\(state.myState.name.name)"
     }
     
     @IBAction func increase(_ sender: UIButton) {
@@ -59,6 +80,10 @@ public class CounterVC: UIViewController, StoreSubscriber {
     
     @IBAction func decrease(_ sender: UIButton) {
         localStore?.dispatch(CounterActions.ReactionDecrease())
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        localStore?.dispatch(NameActions.UpdateName(name: textField.text ?? ""))
     }
     
 }

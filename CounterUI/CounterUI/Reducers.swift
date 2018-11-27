@@ -8,6 +8,13 @@
 
 import ReSwift
 
+public func myStateReducer(action: Action, state: MyState?) -> MyState {
+    var state = state ?? MyState()
+    state.counter = counterReducer(action: action, state: state.counter)
+    state.name = nameReducer(action: action, state: state.name)
+    return state
+}
+
 public func counterReducer(action: Action, state: CounterState?) -> CounterState {
     
     var state = state ?? CounterState(num: 0)
@@ -17,6 +24,19 @@ public func counterReducer(action: Action, state: CounterState?) -> CounterState
         state.num += 1
     case _ as CounterActions.ReactionDecrease:
         state.num -= 1
+    default:
+        break
+    }
+    
+    return state
+}
+
+public func nameReducer(action: Action, state: NameState?) -> NameState {
+    var state = state ?? NameState(name: "")
+    
+    switch action {
+    case let authName as NameActions.UpdateName:
+        state.name = authName.name
     default:
         break
     }
