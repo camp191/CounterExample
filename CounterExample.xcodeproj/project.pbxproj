@@ -18,9 +18,12 @@
 		D0B5D57421A7A3CE00BD348F /* CounterExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D57321A7A3CE00BD348F /* CounterExampleTests.swift */; };
 		D0B5D57F21A7A3CE00BD348F /* CounterExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D57E21A7A3CE00BD348F /* CounterExampleUITests.swift */; };
 		D0B5D58E21A7A47D00BD348F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D58D21A7A47D00BD348F /* AppState.swift */; };
-		D0B5D59021A7A4B100BD348F /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D58F21A7A4B100BD348F /* Actions.swift */; };
 		D0B5D59221A7A58800BD348F /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D59121A7A58800BD348F /* CounterReducer.swift */; };
 		D0DBAFCB21ACEC1900B93768 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DBAFCA21ACEC1900B93768 /* Store.swift */; };
+		D0DBB01221AD270C00B93768 /* CounterUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBB01121AD270C00B93768 /* CounterUI.framework */; };
+		D0DBB01321AD270C00B93768 /* CounterUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBB01121AD270C00B93768 /* CounterUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D0DBB01621AD271100B93768 /* AppState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBB01521AD271100B93768 /* AppState.framework */; };
+		D0DBB01721AD271100B93768 /* AppState.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBB01521AD271100B93768 /* AppState.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF7D3319D887090A7B5062AA /* Pods_CounterExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC882A2C549AC306524E35E /* Pods_CounterExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,21 @@
 			remoteInfo = CounterExample;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0DBB01421AD270D00B93768 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D0DBB01721AD271100B93768 /* AppState.framework in Embed Frameworks */,
+				D0DBB01321AD270C00B93768 /* CounterUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		018DB2194F24D95E167382BC /* Pods-CounterExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CounterExampleUITests/Pods-CounterExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,9 +81,10 @@
 		D0B5D57E21A7A3CE00BD348F /* CounterExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterExampleUITests.swift; sourceTree = "<group>"; };
 		D0B5D58021A7A3CE00BD348F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B5D58D21A7A47D00BD348F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		D0B5D58F21A7A4B100BD348F /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		D0B5D59121A7A58800BD348F /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		D0DBAFCA21ACEC1900B93768 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D0DBB01121AD270C00B93768 /* CounterUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0DBB01521AD271100B93768 /* AppState.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppState.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AD696C72F22B0E5572EEE2 /* Pods-CounterExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CounterExampleTests/Pods-CounterExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		F04C998409A968800D2AFF37 /* Pods_CounterExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CounterExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA44A32E3AB991E86F8765D6 /* Pods-CounterExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CounterExampleUITests/Pods-CounterExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +96,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3B1C47ECFE4E63317ED9714 /* Pods_CounterExample.framework in Frameworks */,
+				D0DBB01221AD270C00B93768 /* CounterUI.framework in Frameworks */,
+				D0DBB01621AD271100B93768 /* AppState.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +146,8 @@
 		D0B5D55221A7A3CD00BD348F = {
 			isa = PBXGroup;
 			children = (
+				D0DBB01521AD271100B93768 /* AppState.framework */,
+				D0DBB01121AD270C00B93768 /* CounterUI.framework */,
 				D0B5D55D21A7A3CD00BD348F /* CounterExample */,
 				D0B5D57221A7A3CE00BD348F /* CounterExampleTests */,
 				D0B5D57D21A7A3CE00BD348F /* CounterExampleUITests */,
@@ -154,7 +177,6 @@
 				D0B5D56721A7A3CE00BD348F /* LaunchScreen.storyboard */,
 				D0B5D56A21A7A3CE00BD348F /* Info.plist */,
 				D0B5D58D21A7A47D00BD348F /* AppState.swift */,
-				D0B5D58F21A7A4B100BD348F /* Actions.swift */,
 				D0B5D59121A7A58800BD348F /* CounterReducer.swift */,
 				D0DBAFCA21ACEC1900B93768 /* Store.swift */,
 			);
@@ -192,6 +214,7 @@
 				D0B5D55821A7A3CD00BD348F /* Frameworks */,
 				D0B5D55921A7A3CD00BD348F /* Resources */,
 				0985BACAB4A2A792B1FA7D82 /* [CP] Embed Pods Frameworks */,
+				D0DBB01421AD270D00B93768 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,7 +430,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0B5D58E21A7A47D00BD348F /* AppState.swift in Sources */,
-				D0B5D59021A7A4B100BD348F /* Actions.swift in Sources */,
 				D0B5D56121A7A3CD00BD348F /* ViewController.swift in Sources */,
 				D0DBAFCB21ACEC1900B93768 /* Store.swift in Sources */,
 				D0B5D59221A7A58800BD348F /* CounterReducer.swift in Sources */,

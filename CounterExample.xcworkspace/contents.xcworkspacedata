@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AppState/AppState.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CounterUI/CounterUI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CounterExample.xcodeproj">
    </FileRef>
    <FileRef

@@ -7,65 +7,24 @@
 //
 
 import UIKit
-import ReSwift
+import AppState
+import CounterUI
 
-
-protocol MyProtocolState {
-    var my: MyState {get set}
-}
-
-struct MyState {
-    var myData: String
-    var myData1: String
-    
-}
-
-extension AppState : MyProtocolState {
-    var my: MyState {
-        get {
-            
-            return self.mystate["MyProtocolState"] as! MyState
-        }
-        set {
-            self.mystate["MyProtocolState"] = newValue
-        }
-    }
-    
-}
-
-class ViewController: UIViewController, StoreSubscriber {
-    
-    typealias StoreSubscriberStateType = AppState
-    
-    @IBOutlet weak var lblCounter: UILabel!
-    @IBOutlet weak var tfName: UITextField!
-    @IBOutlet weak var lblName: UILabel!
-    
-    var localStore: Store<AppState> =  mainStore
+class ViewController: UIViewController {
     
     override func viewDidLoad() {
-        let a: MTLDrawPrimitivesIndirectArguments
-        
         super.viewDidLoad()
-        localStore.subscribe(self)
-        tfName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
     }
     
-    func newState(state: AppState) {
-        lblCounter.text = "\(state.counter.num)"
-        lblName.text = state.auth.name
-    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let storyboard = UIStoryboard(name: "CounterUI", bundle: Bundle(identifier: "com.campus.CounterUI"))
+        if let counterVC = storyboard.instantiateViewController(withIdentifier: "CounterVC") as? CounterVC {
+            counterVC.localStore = mainStore
+            show(counterVC, sender: nil)
+        }
 
-    @IBAction func increase(_ sender: UIButton) {
-        localStore.dispatch(Actions.Counter.ReactionIncrease())
-    }
-    
-    @IBAction func decrease(_ sender: UIButton) {
-        localStore.dispatch(Actions.Counter.ReactionDecrease())
-    }
-    
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        localStore.dispatch(Actions.Auth.updateAuthName(name: textField.text))
     }
     
 }

@@ -1,8 +1,8 @@
 //
 //  Actions.swift
-//  CounterExample
+//  CounterUI
 //
-//  Created by Thanapat Sorralump on 23/11/2561 BE.
+//  Created by Thanapat Sorralump on 27/11/2561 BE.
 //  Copyright © 2561 Thanapat Sorralump. All rights reserved.
 //
 
@@ -13,11 +13,4 @@ struct Actions {
         struct ReactionIncrease: Action {}
         struct ReactionDecrease: Action {}
     }
-    
-    struct Auth {
-        struct updateAuthName: Action {
-            let name: String?
-        }
-    }
 }
-

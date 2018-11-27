@@ -7,8 +7,16 @@
 //
 
 import ReSwift
+import AppState
+import CounterUI
 
 let mainStore = Store<AppState>(
     reducer: appReducer,
     state: nil
 )
+
+func appReducer(action: Action, state: AppState?) -> AppState {
+    var newState = AppState()
+    newState.counter = counterReducer(action: action, state: state?.counter)
+    return newState
+}

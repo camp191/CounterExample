@@ -8,15 +8,6 @@
 
 import ReSwift
 
-struct AppState: StateType {
-    var counter: CounterState
-    var auth: AuthState
-    //var state: MyState
-    
-    var mystate: [String: Any]
-    
-}
-
 
 
 struct CounterState {
