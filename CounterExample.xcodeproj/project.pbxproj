@@ -17,9 +17,7 @@
 		D0B5D56921A7A3CE00BD348F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B5D56721A7A3CE00BD348F /* LaunchScreen.storyboard */; };
 		D0B5D57421A7A3CE00BD348F /* CounterExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D57321A7A3CE00BD348F /* CounterExampleTests.swift */; };
 		D0B5D57F21A7A3CE00BD348F /* CounterExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D57E21A7A3CE00BD348F /* CounterExampleUITests.swift */; };
-		D0B5D58E21A7A47D00BD348F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D58D21A7A47D00BD348F /* AppState.swift */; };
-		D0B5D59221A7A58800BD348F /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5D59121A7A58800BD348F /* CounterReducer.swift */; };
-		D0DBAFCB21ACEC1900B93768 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DBAFCA21ACEC1900B93768 /* Store.swift */; };
+		D0DBAFCB21ACEC1900B93768 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DBAFCA21ACEC1900B93768 /* AppStore.swift */; };
 		D0DBB01221AD270C00B93768 /* CounterUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBB01121AD270C00B93768 /* CounterUI.framework */; };
 		D0DBB01321AD270C00B93768 /* CounterUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBB01121AD270C00B93768 /* CounterUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0DBB01621AD271100B93768 /* AppState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DBB01521AD271100B93768 /* AppState.framework */; };
@@ -80,9 +78,7 @@
 		D0B5D57A21A7A3CE00BD348F /* CounterExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B5D57E21A7A3CE00BD348F /* CounterExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterExampleUITests.swift; sourceTree = "<group>"; };
 		D0B5D58021A7A3CE00BD348F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0B5D58D21A7A47D00BD348F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		D0B5D59121A7A58800BD348F /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
-		D0DBAFCA21ACEC1900B93768 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D0DBAFCA21ACEC1900B93768 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		D0DBB01121AD270C00B93768 /* CounterUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DBB01521AD271100B93768 /* AppState.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppState.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AD696C72F22B0E5572EEE2 /* Pods-CounterExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CounterExampleTests/Pods-CounterExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,9 +172,7 @@
 				D0B5D56521A7A3CE00BD348F /* Assets.xcassets */,
 				D0B5D56721A7A3CE00BD348F /* LaunchScreen.storyboard */,
 				D0B5D56A21A7A3CE00BD348F /* Info.plist */,
-				D0B5D58D21A7A47D00BD348F /* AppState.swift */,
-				D0B5D59121A7A58800BD348F /* CounterReducer.swift */,
-				D0DBAFCA21ACEC1900B93768 /* Store.swift */,
+				D0DBAFCA21ACEC1900B93768 /* AppStore.swift */,
 			);
 			path = CounterExample;
 			sourceTree = "<group>";
@@ -429,10 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B5D58E21A7A47D00BD348F /* AppState.swift in Sources */,
 				D0B5D56121A7A3CD00BD348F /* ViewController.swift in Sources */,
-				D0DBAFCB21ACEC1900B93768 /* Store.swift in Sources */,
-				D0B5D59221A7A58800BD348F /* CounterReducer.swift in Sources */,
+				D0DBAFCB21ACEC1900B93768 /* AppStore.swift in Sources */,
 				D0B5D55F21A7A3CD00BD348F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

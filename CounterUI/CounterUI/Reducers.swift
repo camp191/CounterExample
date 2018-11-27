@@ -13,9 +13,9 @@ public func counterReducer(action: Action, state: CounterState?) -> CounterState
     var state = state ?? CounterState(num: 0)
     
     switch action {
-    case _ as Actions.Counter.ReactionIncrease:
+    case _ as CounterActions.ReactionIncrease:
         state.num += 1
-    case _ as Actions.Counter.ReactionDecrease:
+    case _ as CounterActions.ReactionDecrease:
         state.num -= 1
     default:
         break

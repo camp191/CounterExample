@@ -39,11 +39,6 @@ public class CounterVC: UIViewController, StoreSubscriber {
     
     public var localStore: Store<AppState>?
     
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-        localStore?.subscribe(self)
-    }
-    
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         localStore?.subscribe(self)
@@ -59,11 +54,11 @@ public class CounterVC: UIViewController, StoreSubscriber {
     }
     
     @IBAction func increase(_ sender: UIButton) {
-        localStore?.dispatch(Actions.Counter.ReactionIncrease())
+        localStore?.dispatch(CounterActions.ReactionIncrease())
     }
     
     @IBAction func decrease(_ sender: UIButton) {
-        localStore?.dispatch(Actions.Counter.ReactionDecrease())
+        localStore?.dispatch(CounterActions.ReactionDecrease())
     }
     
 }

@@ -11,12 +11,6 @@ import AppState
 import CounterUI
 
 class ViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let storyboard = UIStoryboard(name: "CounterUI", bundle: Bundle(identifier: "com.campus.CounterUI"))
@@ -24,7 +18,5 @@ class ViewController: UIViewController {
             counterVC.localStore = mainStore
             show(counterVC, sender: nil)
         }
-
     }
-    
 }

@@ -8,9 +8,7 @@
 
 import ReSwift
 
-struct Actions {
-    struct Counter {
-        struct ReactionIncrease: Action {}
-        struct ReactionDecrease: Action {}
-    }
+struct CounterActions {
+    struct ReactionIncrease: Action {}
+    struct ReactionDecrease: Action {}
 }

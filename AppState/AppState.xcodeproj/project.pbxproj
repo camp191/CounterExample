@@ -10,7 +10,6 @@
 		403A81E3CBEC5E56121B998D /* Pods_AppState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631887A4710F65ED15EA8D55 /* Pods_AppState.framework */; };
 		D0DBB00921AD266C00B93768 /* AppState.h in Headers */ = {isa = PBXBuildFile; fileRef = D0DBB00721AD266C00B93768 /* AppState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0DBB01021AD26F900B93768 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DBB00F21AD26F900B93768 /* States.swift */; };
-		D0DBB02521AD32A600B93768 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DBB02421AD32A600B93768 /* AppReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		D0DBB00821AD266C00B93768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0DBB00F21AD26F900B93768 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		D0DBB01E21AD27B900B93768 /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0DBB02421AD32A600B93768 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				D0DBB00721AD266C00B93768 /* AppState.h */,
 				D0DBB00821AD266C00B93768 /* Info.plist */,
 				D0DBB00F21AD26F900B93768 /* States.swift */,
-				D0DBB02421AD32A600B93768 /* AppReducer.swift */,
 			);
 			path = AppState;
 			sourceTree = "<group>";
@@ -189,7 +186,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0DBB02521AD32A600B93768 /* AppReducer.swift in Sources */,
 				D0DBB01021AD26F900B93768 /* States.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
